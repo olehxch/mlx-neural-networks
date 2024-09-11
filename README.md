@@ -1,4 +1,4 @@
-# 🕸️ MLX Neural Networks
+# 💻 MLX Neural Networks
 
 🚀 This repository contains code examples of designing, implementing, and evaluating neural networks. All code examples are from my PoCs, learning and personal experience.
 
@@ -33,7 +33,9 @@ To install all dependencies run the command:
 pip install -r requirements.txt
 ```
 
-### XOR gate neural network
+# MLX Projects
+
+## XOR gate neural network
 
 The first example contains source code for a simple neural network that simulates the [XOR gate](https://en.wikipedia.org/wiki/XOR_gate).
 
