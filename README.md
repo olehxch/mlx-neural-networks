@@ -12,7 +12,8 @@
 
 ## Table of Contents
 
-- [MLX Framework](#mxl-framework)
+1. [MLX Framework](#mxl-framework)
+2. [XOR gate neural network](#xor-gate-neural-network)
 
 ## MLX Framework
 
@@ -33,7 +34,6 @@ To install all dependencies run the command:
 pip install -r requirements.txt
 ```
 
-# MLX Projects
 
 ## XOR gate neural network
 
