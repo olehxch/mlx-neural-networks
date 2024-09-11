@@ -50,7 +50,7 @@ The logic behind the xor gate:
 |    1    |    0    |     1      |
 |    1    |    1    |     0      |
 
-Neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers, and outputs one number as a result.
+Neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers, and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
 
 Project files are [here](./1-xor-gate).
 
