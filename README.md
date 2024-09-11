@@ -41,7 +41,7 @@ The first example contains source code for a simple neural network that simulate
 
 This code was inspired by the ["An Introduction to Apple's MLX: Implementing an XOR Gate"](https://www.youtube.com/watch?v=Ol84fDcFvJA) created by [Circuit Chronicles](https://www.youtube.com/@AshraffHathibelagal).
 
-The logic behind the xor gate is described on the Fig.1
+The logic behind the xor gate:
 
 | Input 1 | Input 2 | XOR Output |
 |---------|---------|------------|
@@ -60,4 +60,4 @@ You can open *[safetensors model file](./1-xor-gate/results/xor_model.safetensor
 
 Test dataset contains 10000 random duplicated combination of the XOR logic. Training results are provided below. After ~6000 iterations the loss is almost zero, therefore provides 100% of correct results for the testing dataset.
 
-![XOR Gate Logic](./1-xor-gate/data/figure1.png "Fig. 1") ![XOR Gate Logic](./1-xor-gate/data/figure2.png "Fig. 2")
+![XOR Gate Logic](./1-xor-gate/data/figure1.png "Fig. 1")
