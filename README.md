@@ -24,6 +24,14 @@ These source code examples contain the usage of [MLX Framework](https://ml-explo
 > 
 > [Apple Open Source Project - MLX](https://opensource.apple.com/projects/mlx/)
 
+## Requirements
+
+All python dependencies are defined in the [requirements.txt](./requirements.txt) file.
+
+To install all dependencies run the command:
+```
+pip install -r requirements.txt
+```
 
 ### XOR gate neural network
 
