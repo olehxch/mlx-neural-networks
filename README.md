@@ -51,7 +51,7 @@ The logic behind the xor gate:
 |    1    |    0    |     1      |
 |    1    |    1    |     0      |
 
-A neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
+A neural network consists of two linear layers. The input layer consists of two neurons, and the output layer contains one neuron. As input, the neural network takes two integer numbers and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
 
 Project files are [here](./1_xor_gate).
 
@@ -93,19 +93,19 @@ python 1_xor_gate/model/model_inferencing.py
 
 ## Neural network as a calculator
 
-This example contains source code for a simple neural network that works as a calculator for two numbers and supports two operations "+" and "-".
+This example contains source code for a simple neural network that works as a calculator for two numbers and supports two operations, "+" and "-."
 
-A neural network consists of 3 linear layers. Three neurons for input, 10 neurons in a hidden layer and 1 neuron for output. As input, the neural network takes two integer numbers, an encoded numerical value that represents "+" (0) or "-" (1), and outputs one number as a result. [Mean squared error loss](https://en.wikipedia.org/wiki/Mean_squared_error) and [Adam optimizer](https://arxiv.org/abs/1412.6980) are used.
+A neural network consists of 3 linear layers—three neurons for input, ten neurons in a hidden layer, and one neuron for output. As input, the neural network takes two integer numbers, an encoded numerical value that represents "+" (0) or "-" (1), and outputs one number as a result. [Mean squared error loss](https://en.wikipedia.org/wiki/Mean_squared_error) and [Adam optimizer](https://arxiv.org/abs/1412.6980) are used.
 
 Project files are [here](./2_calculator).
 
-The training dataset contains 20000 random duplicated combinations. Dataset includes two numbers, operation, and an expected result. Training results are provided below. After ~2000 training iterations, the loss is pretty stable. Validation dataset contains 4000 combinations.
+The training dataset contains 20000 random duplicated combinations. The dataset includes two numbers, an operation, and an expected result. Training results are provided below. After ~2000 training iterations, the loss is pretty stable. The validation dataset contains 4000 combinations.
 
-Neural network returns the answer very close to the expected result. The difference is very minor. However, when using strict comparison of the returned and expected numbers the all results are not the same. Therefore, a round is used for the returned value from the neural network. After rounding the result, neural network provides 100% of correct results for the validation dataset.
+The neural network returns the answer very close to the expected result. The difference is very minor. However, when comparing the returned and expected numbers strictly, all results are not the same. Therefore, a math round operation returns the value from the neural network. After rounding the result, the neural network provides 100% of the correct results for the validation dataset.
 
 
 <p align="center">
-  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="65%"/>
+  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="50%"/>
 </p>
 
 <p align="center">
