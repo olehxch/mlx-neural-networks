@@ -52,12 +52,39 @@ The logic behind the xor gate:
 
 Neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers, and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
 
-Project files are [here](./1-xor-gate).
+Project files are [here](./1_xor_gate).
 
 The project files contain neural network, test dataset generation, model training, model testing, and model inferencing for a single input. The model is also saved in a *[safetensors](https://huggingface.co/docs/safetensors/index)* format, and a result plots are created.
 
-You can open *[safetensors model file](./1-xor-gate/results/xor_model.safetensors)* using [Netron](https://netron.app).
+You can open *[safetensors model file](./1_xor_gate/results/xor_model.safetensors)* using [Netron](https://netron.app).
 
 Test dataset contains 10000 random duplicated combination of the XOR logic. Training results are provided below. After ~6000 iterations the loss is almost zero, therefore provides 100% of correct results for the testing dataset.
 
-![XOR Gate Logic](./1-xor-gate/data/figure1.png "Fig. 1")
+![Training loss](./1_xor_gate/data/figure1.png "Fig. 1")
+![Validation results](./1_xor_gate/data/figure3.png "Fig. 1")
+
+Project files:
+- [Dataset generator](./1_xor_gate/model/dataset.py)
+- [Neural Network](./1_xor_gate/model/neural_network.py)
+- [Model](./1_xor_gate/model/model.py)
+- [Training script](./1_xor_gate/model/model_training.py)
+- [Validation script](./1_xor_gate/model/model_testing.py)
+- [Inferencing script](./1_xor_gate/model/model_testing.py)
+
+To run the training process:
+
+```bash
+python 1_xor_gate/model/model_training.py
+```
+
+To run the validation process:
+
+```bash
+python 1_xor_gate/model/model_testing.py
+```
+
+To run the inferecing:
+
+```bash
+python 1_xor_gate/model/model_inferencing.py
+```

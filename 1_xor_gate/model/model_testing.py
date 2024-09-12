@@ -1,18 +1,18 @@
-from xor_gate import XOR
-from data import Data
+from model import XOR
+from dataset import Dataset
 
-data = Data()
+data = Dataset()
 xor = XOR()
 xor.load()
 
 # Load JSON file
-test_data = data.read_test_cases()
+dataset = data.get_validation_dataset()
 
 count_success = 0
 count_failure = 0
 
 # Iterate through each item in the JSON file
-for i, row in test_data.iterrows():
+for i, row in dataset.iterrows():
     input_1 = int(row.values[0])
     input_2 = int(row.values[1])
     expected_output = int(row.values[2])
@@ -28,9 +28,4 @@ for i, row in test_data.iterrows():
 
 print(f"Success: {count_success}, Failure: {count_failure}")
 
-data.plot_testing_results(count_success, count_failure)
-
-# Test inference for a single input
-#
-# model_output = xor.inference(1, 1)
-# print(f"Model output for 1, 1: {model_output}")
+data.plot_validation_results(count_success, count_failure)
