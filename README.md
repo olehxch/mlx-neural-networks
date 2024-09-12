@@ -62,7 +62,7 @@ You can open *[safetensors model file](./1_xor_gate/results/xor_model.safetensor
 The training dataset contains 10000 random duplicated combinations of the XOR logic. Training results are provided below. After ~6000 iterations, the loss is almost zero, providing 100% of correct results for the validation dataset.
 
 <p align="center">
-  <img src="./1_xor_gate/data/figure1.png" alt="training loss plot" width="48%"/> <img src="./1_xor_gate/data/figure3.png" alt="validation results" width="48%"/>
+  <img src="./1_xor_gate/data/figure1.png" alt="training loss plot" width="41%"/> <img src="./1_xor_gate/data/figure3.png" alt="validation results" width="58%"/>
 </p>
 
 Project files:
@@ -105,11 +105,9 @@ The neural network returns the answer very close to the expected result. The dif
 
 
 <p align="center">
-  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="50%"/>
-</p>
-
-<p align="center">
-  <img src="./2_calculator/data/figure2.png" alt="training loss plot" width="48%"/> <img src="./2_calculator/data/figure3.png" alt="validation results" width="48%"/>
+  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="60%"/>
+  <img src="./2_calculator/data/figure2.png" alt="training loss plot" width="80%"/>
+  <img src="./2_calculator/data/figure3.png" alt="validation results" width="80%"/>
 </p>
 
 Project files:
