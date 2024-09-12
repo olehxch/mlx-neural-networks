@@ -103,11 +103,13 @@ The training dataset contains 20000 random duplicated combinations. The dataset 
 
 The neural network returns the answer very close to the expected result. The difference is very minor. However, when comparing the returned and expected numbers strictly, all results are not the same. Therefore, a math round operation returns the value from the neural network. After rounding the result, the neural network provides 100% of the correct results for the validation dataset.
 
+<p align="center">
+  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="42%"/>
+</p>
 
 <p align="center">
-  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="60%"/>
-  <img src="./2_calculator/data/figure2.png" alt="training loss plot" width="80%"/>
-  <img src="./2_calculator/data/figure3.png" alt="validation results" width="80%"/>
+  <img src="./2_calculator/data/figure2.png" alt="training loss plot" width="48%"/>
+  <img src="./2_calculator/data/figure3.png" alt="validation results" width="48%"/>
 </p>
 
 Project files:
