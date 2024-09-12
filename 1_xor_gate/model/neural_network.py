@@ -1,14 +1,5 @@
 import mlx.nn as nn
 
-# Neural network model for XOR gate
-# Input -> Hidden -> Output
-# O -> O \
-#         -> O
-# O -> O /
-#
-# As input takes two numbers, e.g. [0, 1]
-# As an output returns one number, e.g. [1]
-
 
 class NeuralNetwork(nn.Module):
     def __init__(self):

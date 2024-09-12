@@ -5,13 +5,11 @@ data = Dataset()
 xor = XOR()
 xor.load()
 
-# Load JSON file
 dataset = data.get_validation_dataset()
 
 count_success = 0
 count_failure = 0
 
-# Iterate through each item in the JSON file
 for i, row in dataset.iterrows():
     input_1 = int(row.values[0])
     input_2 = int(row.values[1])

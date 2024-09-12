@@ -4,7 +4,6 @@ import mlx.optimizers as o
 from model import XOR
 from dataset import Dataset
 
-# Instantiate the classes
 dataset = Dataset()
 xor = XOR()
 
@@ -17,7 +16,7 @@ def loss_fn(model, input_data, expected):
     result = mx.mean(mx.square(
         model(input_data) - expected
     ))
-    
+
     return result
 
 
