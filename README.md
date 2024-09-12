@@ -60,8 +60,9 @@ You can open *[safetensors model file](./1_xor_gate/results/xor_model.safetensor
 
 The test dataset contains 10000 random duplicated combinations of the XOR logic. Training results are provided below. After ~6000 iterations, the loss is almost zero, providing 100% of correct results for the testing dataset.
 
-![Training loss](./1_xor_gate/data/figure1.png "Fig. 1")
-![Validation results](./1_xor_gate/data/figure3.png "Fig. 1")
+<p align="center">
+  <img src="./1_xor_gate/data/figure1.png" alt="training loss plot" width="45%"/> <img src="./1_xor_gate/data/figure3.png" alt="validation results" width="45%"/>
+</p>
 
 Project files:
 - [Dataset generator](./1_xor_gate/model/dataset.py)
