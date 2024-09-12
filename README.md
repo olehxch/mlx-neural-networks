@@ -1,8 +1,8 @@
 # 💻 MLX Neural Networks
 
-🚀 This repository contains code examples of designing, implementing, and evaluating neural networks. All code examples are from my PoCs, learning and personal experience.
+🚀 This repository contains code examples of designing, implementing, and evaluating neural networks. All code examples are from my PoCs, learning, and personal experience.
 
-🎓 You can use these code examples for educational or work purposes. I would be grateful for citing materials provided here. Please also cite and credit all materials created by other authors you use for your work.
+🎓 You can use these code examples for educational or work purposes. I would be grateful for citing the materials provided here. Please also cite and credit all materials created by other authors you use for your work.
 
 ⚡️ You can subscribe to my Medium account to read articles about artificial intelligence, cloud computing, state-of-the-art technologies, and also audio engineering! Here is a link:
 
@@ -27,9 +27,9 @@ These source code examples contain the usage of [MLX Framework](https://ml-explo
 
 ## Requirements
 
-All python dependencies are defined in the [requirements.txt](./requirements.txt) file.
+All Python dependencies are defined in the [requirements.txt](./requirements.txt) file.
 
-To install all dependencies run the command:
+To install all dependencies, run the command:
 ```
 pip install -r requirements.txt
 ```
@@ -50,15 +50,15 @@ The logic behind the xor gate:
 |    1    |    0    |     1      |
 |    1    |    1    |     0      |
 
-Neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers, and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
+A neural network consists of 2 linear layers of 2 neurons. As input, the neural network takes two integer numbers and outputs one number as a result. Stochastic gradient descent (SGD) optimizer is used.
 
 Project files are [here](./1_xor_gate).
 
-The project files contain neural network, test dataset generation, model training, model testing, and model inferencing for a single input. The model is also saved in a *[safetensors](https://huggingface.co/docs/safetensors/index)* format, and a result plots are created.
+The project files contain neural networks, test dataset generation, model training, model testing, and model inferencing for a single input. The model is also saved in a *[safetensors](https://huggingface.co/docs/safetensors/index)* format, and a result plots are created.
 
 You can open *[safetensors model file](./1_xor_gate/results/xor_model.safetensors)* using [Netron](https://netron.app).
 
-Test dataset contains 10000 random duplicated combination of the XOR logic. Training results are provided below. After ~6000 iterations the loss is almost zero, therefore provides 100% of correct results for the testing dataset.
+The test dataset contains 10000 random duplicated combinations of the XOR logic. Training results are provided below. After ~6000 iterations, the loss is almost zero, providing 100% of correct results for the testing dataset.
 
 ![Training loss](./1_xor_gate/data/figure1.png "Fig. 1")
 ![Validation results](./1_xor_gate/data/figure3.png "Fig. 1")
@@ -83,7 +83,7 @@ To run the validation process:
 python 1_xor_gate/model/model_testing.py
 ```
 
-To run the inferecing:
+To run the inferencing:
 
 ```bash
 python 1_xor_gate/model/model_inferencing.py
