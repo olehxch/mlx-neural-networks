@@ -13,7 +13,8 @@
 ## Table of Contents
 
 1. [MLX Framework](#mxl-framework)
-2. [XOR gate neural network](#xor-gate-neural-network)
+2. [Neural network as a XOR gate](#neural-network-as-a-xor-gate)
+3. [Neural network as a calculator](#neural-network-as-a-calculator)
 
 ## MLX Framework
 
@@ -35,7 +36,7 @@ pip install -r requirements.txt
 ```
 
 
-## XOR gate neural network
+## Neural network as a XOR gate
 
 The first example contains source code for a simple neural network that simulates the [XOR gate](https://en.wikipedia.org/wiki/XOR_gate).
 
@@ -58,10 +59,10 @@ The project files contain neural networks, test dataset generation, model traini
 
 You can open *[safetensors model file](./1_xor_gate/results/xor_model.safetensors)* using [Netron](https://netron.app).
 
-The test dataset contains 10000 random duplicated combinations of the XOR logic. Training results are provided below. After ~6000 iterations, the loss is almost zero, providing 100% of correct results for the testing dataset.
+The training dataset contains 10000 random duplicated combinations of the XOR logic. Training results are provided below. After ~6000 iterations, the loss is almost zero, providing 100% of correct results for the validation dataset.
 
 <p align="center">
-  <img src="./1_xor_gate/data/figure1.png" alt="training loss plot" width="45%"/> <img src="./1_xor_gate/data/figure3.png" alt="validation results" width="45%"/>
+  <img src="./1_xor_gate/data/figure1.png" alt="training loss plot" width="48%"/> <img src="./1_xor_gate/data/figure3.png" alt="validation results" width="48%"/>
 </p>
 
 Project files:
@@ -88,4 +89,51 @@ To run the inferencing:
 
 ```bash
 python 1_xor_gate/model/model_inferencing.py
+```
+
+## Neural network as a calculator
+
+This example contains source code for a simple neural network that works as a calculator for two numbers and supports two operations "+" and "-".
+
+A neural network consists of 3 linear layers. Three neurons for input, 10 neurons in a hidden layer and 1 neuron for output. As input, the neural network takes two integer numbers, an encoded numerical value that represents "+" (0) or "-" (1), and outputs one number as a result. [Mean squared error loss](https://en.wikipedia.org/wiki/Mean_squared_error) and [Adam optimizer](https://arxiv.org/abs/1412.6980) are used.
+
+Project files are [here](./2_calculator).
+
+The training dataset contains 20000 random duplicated combinations. Dataset includes two numbers, operation, and an expected result. Training results are provided below. After ~2000 training iterations, the loss is pretty stable. Validation dataset contains 4000 combinations.
+
+Neural network returns the answer very close to the expected result. The difference is very minor. However, when using strict comparison of the returned and expected numbers the all results are not the same. Therefore, a round is used for the returned value from the neural network. After rounding the result, neural network provides 100% of correct results for the validation dataset.
+
+
+<p align="center">
+  <img src="./2_calculator/data/figure1.png" alt="training loss plot" width="65%"/>
+</p>
+
+<p align="center">
+  <img src="./2_calculator/data/figure2.png" alt="training loss plot" width="48%"/> <img src="./2_calculator/data/figure3.png" alt="validation results" width="48%"/>
+</p>
+
+Project files:
+- [Dataset generator](./2_calculator/model/dataset.py)
+- [Neural Network](./2_calculator/model/neural_network.py)
+- [Model](./2_calculator/model/model.py)
+- [Training script](./2_calculator/model/model_training.py)
+- [Validation script](./2_calculator/model/model_testing.py)
+- [Inferencing script](./2_calculator/model/model_testing.py)
+
+To run the training process:
+
+```bash
+python 2_calculator/model/model_training.py
+```
+
+To run the validation process:
+
+```bash
+python 2_calculator/model/model_testing.py
+```
+
+To run the inferencing:
+
+```bash
+python 2_calculator/model/model_inferencing.py
 ```
