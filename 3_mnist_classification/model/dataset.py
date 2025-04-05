@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import numpy as np
 
-mnist_files = np.load('./3_mnist_classifier/data/mnist.npz')
+mnist_files = np.load('./3_mnist_classification/data/mnist.npz')
 
 # Load the MNIST dataset
 x_train = mnist_files['x_train']
@@ -18,12 +18,12 @@ class Dataset:
         self.training_dataset_size = 20000
         self.validation_dataset_size = int(self.training_dataset_size * 0.2)
 
-        self.training_dataset_path = './3_mnist_classifier/data/training_dataset.csv'
-        self.validation_dataset_path = './3_mnist_classifier/data/validation_dataset.csv'
+        self.training_dataset_path = './3_mnist_classification/data/training_dataset.csv'
+        self.validation_dataset_path = './3_mnist_classification/data/validation_dataset.csv'
 
-        self.training_results_path = './3_mnist_classifier/results/training_loss.csv'
-        self.plot_training_loss_path = './3_mnist_classifier/results/training_loss.png'
-        self.plot_validation_results_path = './3_mnist_classifier/results/validation_results.png'
+        self.training_results_path = './3_mnist_classification/results/training_loss.csv'
+        self.plot_training_loss_path = './3_mnist_classification/results/training_loss.png'
+        self.plot_validation_results_path = './3_mnist_classification/results/validation_results.png'
 
     def load_images(self, images):
         images = images.astype(np.float32) / 255.0

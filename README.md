@@ -15,7 +15,7 @@
 1. [MLX Framework](#mxl-framework)
 2. [XOR gate](#neural-network-as-a-xor-gate)
 3. [Simple calculator](#neural-network-as-a-calculator)
-4. [MNIST Digit Classifier](#mnist-digit-classifier)
+4. [MNIST Digit classification](#mnist-digit-classification)
 
 ## MLX Framework
 
@@ -147,7 +147,7 @@ To run the inferencing:
 python 2_calculator/model/model_inferencing.py
 ```
 
-## MNIST Digit Classifier
+## MNIST digit Classification
 
 This example contains source code for a simple MNIST digit classifier. It uses MNIST database of 60000 handwritten digits as images with 28x28 size.
 
@@ -160,32 +160,32 @@ Project files are [here](./3_mnist_classifier/).
 The training dataset contains 60000 MNIST handwritten digits. The dataset includes digits and labels. The validation dataset contains 10000 images and labels. Training results are provided below.
 
 <p align="center">
-  <img src="./3_mnist_classifier/data/figure1.png" alt="training loss plot" width="48%"/>
-  <img src="./3_mnist_classifier/data/figure2.png" alt="validation results" width="48%"/>
+  <img src="./3_mnist_classification/data/figure1.png" alt="training loss plot" width="48%"/>
+  <img src="./3_mnist_classification/data/figure2.png" alt="validation results" width="48%"/>
 </p>
 
 Project files:
-- [Dataset generator](./3_mnist_classifier//model/dataset.py)
-- [Neural Network](./3_mnist_classifier//model/neural_network.py)
-- [Model](./3_mnist_classifier//model/model.py)
-- [Training script](./3_mnist_classifier//model/model_training.py)
-- [Validation script](./3_mnist_classifier//model/model_testing.py)
-- [Inferencing script](./3_mnist_classifier//model/model_testing.py)
+- [Dataset generator](./3_mnist_classification//model/dataset.py)
+- [Neural Network](./3_mnist_classification//model/neural_network.py)
+- [Model](./3_mnist_classification//model/model.py)
+- [Training script](./3_mnist_classification//model/model_training.py)
+- [Validation script](./3_mnist_classification//model/model_testing.py)
+- [Inferencing script](./3_mnist_classification//model/model_testing.py)
 
 To run the training process:
 
 ```bash
-uv run ./3_mnist_classifier/model/model_training.py
+uv run ./3_mnist_classification/model/model_training.py
 ```
 
 To run the validation process:
 
 ```bash
-uv run ./3_mnist_classifier/model/model_testing.py
+uv run ./3_mnist_classification/model/model_testing.py
 ```
 
 To run the inferencing:
 
 ```bash
-uv run ./3_mnist_classifier/model/model_inferencing.py
+uv run ./3_mnist_classification/model/model_inferencing.py
 ```

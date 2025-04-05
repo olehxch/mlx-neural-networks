@@ -6,8 +6,8 @@ from neural_network import NeuralNetwork
 class NumberClassifierModel(NeuralNetwork):
     def __init__(self, exact_values=False):
         super().__init__(exact_values)
-        self.folder_path = "./3_mnist_classifier/results"
-        self.model_path = "./3_mnist_classifier/results/number_classifier_model.safetensors"
+        self.folder_path = "./3_mnist_classification/results"
+        self.model_path = "./3_mnist_classification/results/number_classifier_model.safetensors"
         os.makedirs(self.folder_path, exist_ok=True)
 
     def test(self, input, expected_output):
