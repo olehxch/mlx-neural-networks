@@ -1,0 +1,7 @@
+[project]
+name = "mlx-neural-networks"
+version = "0.1.1"
+description = "This repository contains code examples of designing, implementing, and evaluating neural networks."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
