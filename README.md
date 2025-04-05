@@ -85,19 +85,19 @@ Project files:
 To run the training process:
 
 ```bash
-python 1_xor_gate/model/model_training.py
+uv run ./1_xor_gate/model/model_training.py
 ```
 
 To run the validation process:
 
 ```bash
-python 1_xor_gate/model/model_testing.py
+uv run ./1_xor_gate/model/model_testing.py
 ```
 
 To run the inferencing:
 
 ```bash
-python 1_xor_gate/model/model_inferencing.py
+uv run ./1_xor_gate/model/model_inferencing.py
 ```
 
 ## Neural network as a calculator
@@ -132,19 +132,19 @@ Project files:
 To run the training process:
 
 ```bash
-python 2_calculator/model/model_training.py
+uv run ./2_calculator/model/model_training.py
 ```
 
 To run the validation process:
 
 ```bash
-python 2_calculator/model/model_testing.py
+uv run ./2_calculator/model/model_testing.py
 ```
 
 To run the inferencing:
 
 ```bash
-python 2_calculator/model/model_inferencing.py
+uv run ./2_calculator/model/model_inferencing.py
 ```
 
 ## MNIST digit Classification
