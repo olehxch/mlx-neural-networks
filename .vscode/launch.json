@@ -12,6 +12,19 @@
       "console": "integratedTerminal"
     },
     {
+      "name": "Python:UV",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [
+           "uv",
+           "run",
+           "${file}"
+      ],
+      "cwd": "${workspaceFolder}",
+    },
+    {
       "name": "Python:Streamlit",
       "type": "debugpy",
       "request": "launch",
