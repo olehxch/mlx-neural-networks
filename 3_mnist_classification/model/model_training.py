@@ -26,6 +26,8 @@ images, labels = dataset.get_training_dataset()
 training_results = []
 epochs = 3
 
+dataset.show_images_as_matrix()
+
 # Iterate over the dataset and train the model
 for epoch in range(epochs):
     i = 0

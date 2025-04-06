@@ -151,6 +151,10 @@ uv run ./2_calculator/model/model_inferencing.py
 
 This example contains source code for a simple MNIST digit classifier. It uses MNIST database of 60000 handwritten digits as images with 28x28 size.
 
+<p align="center">
+  <img src="./3_mnist_classification/data/fig3.png" alt="training loss plot" width="48%"/>
+</p>
+
 A neural network consists of 3 linear layers - 784 (28*28) neurons for input, 40 neurons in a hidden layer, and 10 neurons for output. As input, the neural network takes 784 float numbers, that represent the input image. 
 
 [Mean squared error loss](https://en.wikipedia.org/wiki/Mean_squared_error) and [Adam optimizer](https://arxiv.org/abs/1412.6980) are used.
@@ -160,8 +164,8 @@ Project files are [here](./3_mnist_classifier/).
 The training dataset contains 60000 MNIST handwritten digits. The dataset includes digits and labels. The validation dataset contains 10000 images and labels. Training results are provided below.
 
 <p align="center">
-  <img src="./3_mnist_classification/data/figure1.png" alt="training loss plot" width="48%"/>
-  <img src="./3_mnist_classification/data/figure2.png" alt="validation results" width="48%"/>
+  <img src="./3_mnist_classification/data/fig1.png" alt="training loss plot" width="48%"/>
+  <img src="./3_mnist_classification/data/fig2.png" alt="validation results" width="48%"/>
 </p>
 
 Project files:

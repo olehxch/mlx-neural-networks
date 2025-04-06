@@ -28,24 +28,24 @@ class Dataset:
     def load_images(self, images):
         images = images.astype(np.float32) / 255.0
         images = images.reshape(images.shape[0], -1)
-        
+
         return images
-    
+
     def load_labels(self, labels):
         labels = np.array([np.eye(10)[i] for i in labels])
-        
+
         return labels
 
     def get_training_dataset(self):
         images = self.load_images(x_train)
         labels = self.load_labels(y_train)
-        
+
         return images, labels
 
     def get_validation_dataset(self):
         images = self.load_images(x_test)
         labels = [i.item() for i in y_test]
-        
+
         return images, labels
 
     def save_training_results(self, training_results):
@@ -78,3 +78,28 @@ class Dataset:
         plt.title("Validation Results")
         plt.savefig(self.plot_validation_results_path)
         # plt.show()
+
+    def show_image(self, index=0):
+        image = x_test[index]  # Select the image at the given index
+        plt.imshow(image, cmap='gray')  # Display the image in grayscale
+        plt.title(f"Label: {y_test[index]}")  # Display the corresponding label
+        plt.axis('off')  # Turn off the axis
+        plt.show()
+
+    def show_images_as_matrix(self, rows=10, cols=10):
+        images, labels = self.get_training_dataset()
+        images = images.reshape(-1, 28, 28)  # Reshape flattened images back to 28x28
+
+        fig, axes = plt.subplots(rows, cols, figsize=(5, 5))
+        # fig.suptitle("MNIST Images", fontsize=14)
+
+        for i in range(rows * cols):
+            row, col = divmod(i, cols)
+            axes[row, col].imshow(images[i], cmap='gray')
+            # axes[row, col].set_title(f"Label: {labels[i]}")
+            axes[row, col].axis('off')
+
+        fig.canvas.manager.set_window_title("MNIST Visualization")
+        plt.tight_layout()
+        plt.subplots_adjust(top=1.0, wspace=0.1, hspace=0.1)  # Adjust space for the title
+        plt.show()
