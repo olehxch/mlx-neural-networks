@@ -16,6 +16,7 @@
 2. [XOR Gate](#xor-gate)
 3. [Calculator](#calculator)
 4. [MNIST Digit Classification](#mnist-digit-classification)
+5. [Cat and Dog Classification](#cat-and-dog-classification)
 
 ## MLX Framework
 
@@ -192,4 +193,67 @@ To run the inferencing:
 
 ```bash
 uv run ./3_mnist_classification/model/model_inferencing.py
+```
+
+## Cat and Dog Classification
+
+### Model Description
+
+This example contains source code for a simple cat and dog classification model. A neural network is built using linear layers. The neural network accepts a flattened 64×64 image (4096 pixels) as input, and outputs a single value that represents the probability of the image being a dog (with 0 for cat and 1 for dog). Each image is reduced to 64×64 size grayscale format. 
+[Binary cross entropy loss](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a/) and [Adam optimizer](https://arxiv.org/abs/1412.6980) are used.
+
+### Data Source
+
+Data source - [Cats and Dogs Classification Dataset on Kaggle](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset/data). The training dataset contains a collection of labeled cat and dog images, and the validation dataset is used to evaluate the model’s performance. Dataset is divided into 80% of training data and 20% of validation data.
+
+<p align="center">
+  <img src="./4_cats_dogs_classification/data/fig1.png" width="50%"/>
+</p>
+
+### Results
+
+The loss, which measures how far the model’s predictions are from the true labels, started high and then dropped quickly at first. However, it soon leveled off at a moderate value. The model achieved an accuracy of around 58%. While this shows that the model can learn from the data, the results are not strong enough for practical use.
+
+<p align="center">
+  <img src="./4_cats_dogs_classification/data/fig2.png" alt="training loss plot" width="48%"/>
+  <img src="./4_cats_dogs_classification/data/fig3.png" alt="validation results" width="48%"/>
+</p>
+
+
+### Why Accuracy is Low
+The low accuracy of ~58% happens because the model is too simple for the task. It only uses a few linear layers, which makes it hard to learn the detailed patterns in images. Flattening a 64×64 image into one long list of numbers loses important information like shapes and edges. Changing the images to grayscale also removes color, which can be useful in telling cats from dogs. In addition, if the training data is small or the settings like learning rate and batch size are not ideal, the model may struggle even more.
+
+### How to Improve the Model
+To improve the accuracy Convolutional Neural Network (CNN) can be used instead. CNNs are designed for image data and can keep the spatial details like edges and textures. You can also make the network bigger by adding more layers and using techniques like dropout or batch normalization to help it learn better. Keeping the images in color and using data augmentation methods like flipping or rotating them can add variety to your training data. Finally, adjusting the learning settings and making sure the dataset is balanced will also help boost the accuracy.
+
+### Summary
+
+For educational purposes, this simple cat and dog classifier using linear layers was trained to show that it is possible to build a model from scratch. However, the low accuracy of this basic approach clearly indicates that more advanced models, such as CNNs, are needed for better performance in practical applications.
+
+### Project Files
+
+Project files:
+- [Dataset generator](./4_cats_dogs_classification//model/dataset.py)
+- [Neural Network](./4_cats_dogs_classification//model/neural_network.py)
+- [Model](./4_cats_dogs_classification//model/model.py)
+- [Training script](./4_cats_dogs_classification//model/model_training.py)
+- [Validation script](./4_cats_dogs_classification//model/model_testing.py)
+- [Inferencing script](./4_cats_dogs_classification//model/model_testing.py)
+
+To run the training process:
+
+```bash
+uv run ./4_cats_dogs_classification/model/model_training.py
+```
+
+To run the validation process:
+
+```bash
+uv run ./4_cats_dogs_classification/model/model_testing.py
+```
+
+To run the inferencing:
+
+```bash
+uv run ./4_cats_dogs_classification/model/model_inferencing.py
 ```
