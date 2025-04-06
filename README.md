@@ -13,8 +13,8 @@
 ## Table of Contents
 
 1. [MLX Framework](#mxl-framework)
-2. [XOR Gate](#neural-network-as-a-xor-gate)
-3. [Calculator](#neural-network-as-a-calculator)
+2. [XOR Gate](#xor-gate)
+3. [Calculator](#calculator)
 4. [MNIST Digit Classification](#mnist-digit-classification)
 
 ## MLX Framework
