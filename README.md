@@ -13,9 +13,9 @@
 ## Table of Contents
 
 1. [MLX Framework](#mxl-framework)
-2. [XOR gate](#neural-network-as-a-xor-gate)
-3. [Simple calculator](#neural-network-as-a-calculator)
-4. [MNIST Digit classification](#mnist-digit-classification)
+2. [XOR Gate](#neural-network-as-a-xor-gate)
+3. [Calculator](#neural-network-as-a-calculator)
+4. [MNIST Digit Classification](#mnist-digit-classification)
 
 ## MLX Framework
 
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 
-## Neural network as a XOR gate
+## XOR Gate
 
 The first example contains source code for a simple neural network that simulates the [XOR gate](https://en.wikipedia.org/wiki/XOR_gate).
 
@@ -100,7 +100,7 @@ To run the inferencing:
 uv run ./1_xor_gate/model/model_inferencing.py
 ```
 
-## Neural network as a calculator
+## Calculator
 
 This example contains source code for a simple neural network that works as a calculator for two numbers and supports two operations, "+" and "-."
 
@@ -147,7 +147,7 @@ To run the inferencing:
 uv run ./2_calculator/model/model_inferencing.py
 ```
 
-## MNIST digit Classification
+## MNIST Digit Classification
 
 This example contains source code for a simple MNIST digit classifier. It uses MNIST database of 60000 handwritten digits as images with 28x28 size.
 
